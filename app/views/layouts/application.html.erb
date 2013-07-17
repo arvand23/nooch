@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nooch Labs</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--for responsive bootstrap -->
+</head>
+<body>
+</div>
+<div class="container">
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+ 
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+ 
+      <!-- Be sure to leave the brand out there if you want it shown -->
+      <a class="brand" href="<%=root_path%>">nooch labs</a>
+ 
+      <!-- Everything you want hidden at 940px or less, place within here -->
+      <div class="nav-collapse collapse">
+        
+      		</ul>
+      		<ul class="nav pull-right">
+      		<li class="divider-vertical"></li>
+      		<li><%= link_to "Join Nooch", new_job_path %></li>
+      		<li><%= link_to "Products", pages_products_path %></li>
+      		<li><%= link_to "Contact", pages_contact_path %></li>
+    		</ul>      
+      </div>
+ 
+    </div>
+  </div>
+</div>
+</div>
+
+<%= yield %>
+
+</body>
+</html>
